@@ -37,35 +37,36 @@ class ToDoList {
 
     public void addTask(String description) {
         tasks.add(new Task(description));
-        System.out.println("Task added successfully.");
+        System.out.println("Task added successfully.\n");
     }
 
     public void removeTask(int index) {
         if (index >= 0 && index < tasks.size()) {
             tasks.remove(index);
-            System.out.println("Task removed successfully.");
+            System.out.println("Task removed successfully.\n");
         } else {
-            System.out.println("Invalid task index.");
+            System.out.println("Invalid task index.\n");
         }
     }
 
     public void markTaskAsDone(int index) {
         if (index >= 0 && index < tasks.size()) {
             tasks.get(index).markAsDone();
-            System.out.println("Task marked as done.");
+            System.out.println("Task marked as done.\n");
         } else {
-            System.out.println("Invalid task index.");
+            System.out.println("Invalid task index.\n");
         }
     }
 
     public void displayTasks() {
         if (tasks.isEmpty()) {
-            System.out.println("No tasks in the to-do list.");
+            System.out.println("No tasks in the to-do list.\n");
         } else {
             System.out.println("To-Do List:");
             for (int i = 0; i < tasks.size(); i++) {
                 System.out.println(i + ". " + tasks.get(i));
             }
+            System.out.println("\n");
         }
     }
 }
